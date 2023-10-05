@@ -34,6 +34,11 @@
 
     <!-- links de estilos -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@1,300&family=Inter:wght@800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Se cambia el tema de algunos navegadores -->
     <meta name="theme-color" content="#fafafa" />
@@ -44,24 +49,41 @@
   </head>
   <body>
     <div id="container">
+      <!-- GRI PAPÀ -->
       <!-- *** ESTRUCTURA SEMÁNTICA *** -->
       <!-- Header (encabezado de la página, zona superior) -->
+      <!-- PRIMER HIJO HEADER -->
       <header>
+        <img class="header__hamburguer" src="svg/menu.svg" alt="">
         <!-- nav (el navegador de toda la web) -->
-        <nav>
+        <!-- <nav>
           <a href="" class="link1">link1</a>
           <a href="" class="link2">link2</a>
           <a href="" class="link3">link3</a>
           <a href="" class="link4">link4</a>
-        </nav>
+        </nav> -->
       </header>
-      <!-- Main (centro de la página, zona central) -->
-      <main>
-        <!-- section y article (posibilidades dentro de main) -->
-      </main>
-      <!-- Footer (final de la página, zona inferior) -->
-      <footer>
-        <h6>&copy;Copyright</h6>
+      <!-- SEGUNDO HIJO BANNER -->
+      <picture class="banner"></picture>
+      <!-- ASIDE suele salir en los bloques de la izquierda, estructura que va en un bloque lateral, hijo de grid -->
+      <aside class="aside__texto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum pariatur asperiores doloribus veritatis illo ratione aliquid iusto quas minus natus doloremque nesciunt praesentium, rerum inventore consequuntur. Consectetur dolore vel sapiente reprehenderit molestias dolores modi saepe quaerat sed? Commodi cum minus tenetur eius ipsam rerum a illum, fuga asperiores totam placeat!</p>
+      </aside>
+      <!-- Footer (final de la página, zona inferior) HIJO DE GRID-->
+      <footer class="footer__informacion">
+        <ul>
+          <li>Arnold_Okuneva@hotmail.com</li>
+          <li>http://clair.net</li>
+          <li>4097 Leopold Field</li>
+          <li>East</li>
+          <li>Nauru</li>
+          <li>234-702-4719</li>
+          <li>Hane - Armstrong</li>
+          <li>Corporate Creative Officer/li>
+          <li>
+            <img class="footer__logo" src="svg/logoOscuro.svg" alt="">
+          </li>
+        </ul>
       </footer>
     </div>
 

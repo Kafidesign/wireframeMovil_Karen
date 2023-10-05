@@ -6,10 +6,20 @@
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
 
+html {
+  color: #000;
+  text-align: justify;
+  font-size: 18px;
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  line-height: normal;
+}
+
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+    font-family: "";
+    src: url("") format("woff2"), url("") format("woff");
 }
 
 /* ******************************** */
@@ -17,3 +27,49 @@
 /* Colores */
 
 /* ******************************** */
+
+body{
+  background: #AEB2B1;
+}
+/* container */
+#container{
+  height: 100vh;
+  padding: 0 0 0 18px;
+  display: grid;
+  grid-template-columns: calc(50% - 18px);
+  grid-template-rows: repeat(3, auto);
+  row-gap: 30px;
+  column-gap: 18px;
+
+
+/* BANNER */
+& .header__hamburguer{
+  margin-top: 18px;
+}
+& .banner{
+  background: url(../img/smartphone/banner.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+
+/* footer */
+& footer{
+  font-size: 10px;
+  background: #999996;;
+  padding: 18px 18px 0 18px;
+  color: white;
+}
+
+& .footer__informacion{
+  line-height: 2;
+}
+
+& .footer__logo{
+  padding: 18px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+}
