@@ -37,6 +37,10 @@ body{
   padding: 0 0 0 18px;
   display: grid;
   grid-template-columns: calc(50% - 18px);
+  /* Escritorio */
+  @media only screen and (min-width:1000px) {
+    grid-template-columns: 181px 1fr;
+  }
   grid-template-rows: repeat(3, auto);
   row-gap: 30px;
   column-gap: 18px;
@@ -45,9 +49,13 @@ body{
 /* BANNER */
 & .header__hamburguer{
   margin-top: 18px;
+  /* desktop */
+  @media only screen and (min-width:1000px) {
+    display: none;
+  }
 }
 & .banner{
-  background: url(../img/smartphone/banner.webp);
+  background: url(../img/smartphone/S_banner.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
@@ -72,4 +80,85 @@ body{
   display: flex;
   justify-content: center;
 }
+}
+
+.banner{
+  /* Retina Display */
+    /* Móvil */
+    @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
+      @media (-webkit-min-device-pixel-ratio: 1){
+          background-image: url(../img/smartphone/S_banner.webp);
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 2) {
+          background-image: url(../img/smartphone/S_banner@2x.webp);
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 3) {
+          background-image: url(../img/smartphone/S_banner@3x.webp);
+      }
+  }
+
+  /* Escritorio */
+  @media only screen and (min-width: 1000px) {
+      background-image: url(../img/desktop/D_banner.webp);
+      @media (-webkit-max-device-pixel-ratio: 2) {
+          background-image: url(../img/desktop/D_banner@2x.webp);
+      }
+      display: none;
+  }
+}
+
+header{
+  /* Escritorio */
+    @media only screen and (min-width: 1000px) {
+      background-image: url(../img/desktop/D_banner.webp);
+      @media (-webkit-max-device-pixel-ratio: 2) {
+          background-image: url(../img/desktop/D_banner@2x.webp);
+      }
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+      grid-row: 1/4;
+      grid-column: 2/3;
+      padding: 20px;
+
+      /* GRID */
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: [menu]auto [espacio]1fr [logotipo]auto [espacio]1fr;
+      .header__menu{
+        display: flex;
+        color: white;
+        
+      }
+      .header__logotipo{
+        grid-row: 3/4;
+      }
+
+      nav{
+        display: flex;
+        gap:10px
+      }
+  }
+}
+
+
+
+/* ********************************************************* */
+/* Mostrar y No mostrar en Smartphone */
+.header__logotipo{
+  display: none;
+}
+
+/* Estos se activan en una pantalla de 1000px */
+/* Mostrar y No mostrar en Escritorio */
+@media only screen and (min-width:1000px){
+  .header__hamburguer, .banner{
+    display: none;
+  }
+  
+  .header__logotipo{
+    display: block;
+  }
 }
